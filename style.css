@@ -1,0 +1,157 @@
+:root {
+    --color-primary: #006181;
+    --color-primary-dark: rgba(0, 77, 102, 0.931);
+
+    --color-white: #f3f3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(
+                          100deg,  
+                         rgba(5,84,94,1) 16%, 
+                         #bbb 91.1% );
+}
+
+img {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0, .16),
+                0 2px 5px rgba(0,0,0, .1);
+}
+
+.container {
+    padding: 20px;
+}
+
+.tab-container {
+    max-width: 1000px;
+    margin: 20px auto ;
+    list-style: none;
+    position: relative;
+}
+
+ input[type="radio"] {
+    display: none;
+}
+
+.tab-container  li {
+    float: left;
+    display: block;
+}
+
+.tab-container label {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 1px 0 0;
+
+    transition: all .3s ease;
+}
+
+.tab-container [id^="tab"]:checked + label {
+    background-color: var(--color-primary-dark);
+}
+
+/* tab-content style */
+.tab-content {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 20px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border-radius: 0 5px 5px 5px;
+    
+    display: none;
+}
+
+.tab-container [id^="tab"]:checked ~ .tab-content {
+    display: block;
+}
+
+.inner {
+    display: flex;
+}
+
+.inner-left {
+    padding: 0 10px;
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social .icon {
+    background-color: var(--color-primary);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.social .icon:hover {
+    color: #006181;
+    background-color: var(--color-white);
+    transform:translateY(-2px) ;
+}
+
+/* Button style start */
+.btn {
+    display: inline-block;
+    color: var(--color-white);
+    font-size: 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 1px solid var(--color-white);
+    margin-top: 10px;
+
+    transition: all .2s ease-in-out; 
+
+}
+
+.btn span {
+    margin-left: 5px;
+    transition: margin-left .3s ease-in-out; 
+}
+  
+.btn:hover {
+    background: var(--color-white);
+    color: #000;
+}
+
+.btn:hover span {
+    margin-left: 15px; 
+}
